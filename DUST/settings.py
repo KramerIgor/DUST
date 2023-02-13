@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import psycopg2
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -132,3 +133,7 @@ MEDIA_URL = '/media/'
 # Add the following lines
 CURRENCY_ICONS_ROOT = os.path.join(MEDIA_ROOT, 'currency_icons') #иконки валют
 CURRENCY_ICONS_URL = os.path.join(MEDIA_URL, 'currency_icons/') #иконки валют
+
+#users
+
+AUTH_USER_MODEL = 'users.User'
